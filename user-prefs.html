@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Preferences</title>
+</head>
+<body>
+    <form onsubmit="onSave(event)">
+        <div>
+            <label for="color">color:</label>
+            <input type ="color" id="color" name="bgColor">
+        </div>
+        <div>
+            <label for="date">date:</label>
+            <input type="date" id="date" name="birthDate">
+        </div>
+        <div>
+            <label for="time">time:</label>
+            <input type="time" id="time" name="birthTime">
+        </div>
+        <div>
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="age">age:</label>
+            <input type="range" min ="18" max="120" id="age" name="age" onchange="this.title=this.value">
+        </div>
+        <button>save changes</button>
+    </form>
+    <p class="forecast"></p>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/user-prefs-service.js"></script>
+    <script src="js/services/utils-service.js"></script>
+    <script src="js/user-prefs-controller.js"></script>
+</body>
+</html>
